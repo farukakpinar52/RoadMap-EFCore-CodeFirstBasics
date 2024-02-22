@@ -1,0 +1,35 @@
+﻿
+Package Manager Console kullanarak 
+not : art arda oluşturulan her migration bir önceki varolan migration'a göre sadece değişiklikleri(eklenen/silinen) içerisinde barındırır
+
+1) migration oluşturmak
+
+add-migration [your_migration_name]
+
+2) migrate yolunu belirlemek
+
+add-migration [your_migration_name] -OutputDir [klasör_adı]  
+
+eğer bu path verilmezse klasör migrations olarak oluşturulur
+
+2)migration'ı silmek
+
+remove-migration ile mevcut tüm migration 'lar fiziksel olarak silinir
+
+3) sistemde ne kadar migration var öğrenmek için
+
+get-migration
+
+4) migration'ları migrate etmek (Up fonksiyonu)
+
+update-database
+
+5) varolan migration'ları geri almak (Down fonksiyonu)
+
+update-database [dönülecek_olan_migration_ismi]
+
+
+Not : CLI ile EntityFrameworkCore komutlarına https://learn.microsoft.com/tr-tr/ef/core/cli/dotnet adresinden ulaşabiliriz.
+
+
+

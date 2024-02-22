@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CodeFirstAndMigration.Context
 {
-    public class CodefirstDBContext : DbContext //DbContext microsoftEf 'den geliyor
+    public class CodefirstDBContext : DbContext //DbContext microsoftEfCore 'dan kalıtım alıyoruz
     {
 
         public DbSet<Customer> Customers { get; set; } //Tablolar
